@@ -3,10 +3,14 @@ import 'dart:io';
 void main() {
   print('Vamos fazer um cáuculo matemático. Digite um número');
   double numeroUm = double.parse(stdin.readLineSync()!);
+
+  print(
+    'Qual operação você quer executar? (+ para soma, - para subtração, * para multiplicação e / para divisão)',
+  );
+  String? operacao = stdin.readLineSync()!;
+
   print('Agora digite outro número');
   double numeroDois = double.parse(stdin.readLineSync()!);
-  print('Qual operação você quer executar?');
-  String? operacao = stdin.readLineSync()!;
 
   void soma() {
     print(numeroUm + numeroDois);
@@ -24,34 +28,28 @@ void main() {
     print(numeroUm / numeroDois);
   }
 
-  if (operacao == "+") {
-    soma();
-  } else {
-    if (operacao == "-") {
-      subtracao();
-    } else {
-      if (operacao == "/") {
+  void calculadora() {
+    switch (operacao) {
+      case "+":
+        soma();
+        break;
+
+      case "-":
+        subtracao();
+        break;
+
+      case "*":
+        multiplicacao();
+        break;
+
+      case "/":
         divisao();
-      } else {
-        if (operacao == "*") {
-          multiplicacao();
-        }
-      }
+        break;
+
+      default:
+        print("Operação inválida");
     }
-  }
+}
 
-  switch (operacao) {
-    case "+":
-    soma();
-
-    case "-":
-    subtracao();
-
-    case "*":
-    multiplicacao();
-
-    case "/" :
-    divisao();
-    break; 
-  }
+  calculadora();
 }
