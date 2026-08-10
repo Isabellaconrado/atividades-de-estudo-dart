@@ -6,42 +6,38 @@ void main() {
   String operacao = "";
   List<String> operacoes = ["+", "-", "*", "/"];
 
-  void soma() {
-    print(numeroUm + numeroDois);
+  double soma() {
+    return numeroUm + numeroDois;
   }
 
-  void subtracao() {
-    print(numeroUm - numeroDois);
+  double subtracao() {
+    return numeroUm - numeroDois;
   }
 
-  void multiplicacao() {
-    print(numeroUm * numeroDois);
+  double multiplicacao() {
+    return numeroUm * numeroDois;
   }
 
-  void divisao() {
-    print(numeroUm / numeroDois);
+  double divisao() {
+    return numeroUm / numeroDois;
   }
 
-  void calculadora() {
+  double calculadora() {
     switch (operacao) {
       case "+":
-        soma();
-        break;
+        return soma();
 
       case "-":
-        subtracao();
-        break;
+        return subtracao();
 
       case "*":
-        multiplicacao();
-        break;
+        return multiplicacao();
 
       case "/":
-        divisao();
-        break;
+        return divisao();
 
       default:
-        print("Operação inválida");
+        return 0;
     }
   }
 
@@ -84,5 +80,7 @@ void main() {
   }
 
   calculadora();
-  print('O resultado da operação $numeroUm $operacao $numeroDois é: ');
+  double resultado = calculadora();
+
+  print('O resultado da operação $numeroUm $operacao $numeroDois é: $resultado');
 }
