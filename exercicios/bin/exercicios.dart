@@ -7,14 +7,13 @@
 //   print('O dobro de $numeroDigitado é ${numeroDigitado * 2}');
 // }
 
-
 // ---------------------------
 // 2)
 // import 'dart:io';
 // void main () {
 //   print('Digite a idade da primeira pessoa');
 //   double idadeUm = double.parse(stdin.readLineSync()!);
-  
+
 //   print('Digite a idade da segunda pessoa');
 //   double idadeDois = double.parse(stdin.readLineSync()!);
 
@@ -49,3 +48,44 @@
 //   print('Pastoral: $pastoral');
 
 // }
+// --------------------------------------
+// RECURSÃO
+// 1)
+
+// import 'dart:io';
+
+// void main() {
+//   List<String> listaCategorias = [
+//     "eletronicos",
+//     "alimentos",
+//     "vestuario",
+//     "livros",
+//   ];
+
+//   print('Digite o nome do produto');
+//   String? nomeProduto = stdin.readLineSync();
+//   void adicionarProduto() {
+//     print('A qual categoria este produto pertence? ${listaCategorias.toString()}');
+//     String? categoria = stdin.readLineSync();
+
+//     if (categoria != null) {
+//       if (listaCategorias.contains(categoria)) {
+//         print(
+//           'Produto $nomeProduto adicionado com sucesso na categoria $categoria',
+//         );
+//       } else {
+//         print(
+//           'Categoria inválida. Por favor, escolha uma das seguintes categorias: ${listaCategorias.toString()}',
+//         );
+//         adicionarProduto();
+//       }
+//     }
+//   }
+
+//   adicionarProduto();
+// }
+
+// --------------------------------
+// 2)
+
+
