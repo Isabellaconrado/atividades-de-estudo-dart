@@ -55,7 +55,7 @@ void main() {
   // Se a entrada digitada pelo usuário for diferente de nula, o programa irá perguntar se ela está na lista operacoes, declarada no início do código. Se estiver a operação torna-se igual a entrada digitada
   void getOperacao() {
     print(
-      'Qual operação você quer executar? (+ para soma, - para subtração, * para multiplicação e / para divisão)',
+      'Qual operação você quer executar? ${operacoes.toString()}',
     );
     entrada = stdin.readLineSync();
 
