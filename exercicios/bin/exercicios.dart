@@ -86,6 +86,25 @@
 // }
 
 // --------------------------------
-// 2)
+// Loopins de repetição
 
+//1)
 
+// void main () {
+//   for (var i = 1 ; i <= 5 ; i++) {
+//     print(i);
+//   }
+// }
+
+//2)
+
+// void main () {
+//   List<String> nomes = ["Isabella", "Lara", "Vanessa", "Roberto"];
+
+//   for (var i = 0 ; i < nomes.length ; i++) {
+//     print(nomes[i]);
+//   }
+
+// }
+
+  
