@@ -6,7 +6,9 @@ void main () {
 }
 
 String getComando() {
+  print("");
   print("Digite um comando: 1 - Adicionar nota, 2 - Listar notas, 3 - Sair");
+  print("");
   List<String> comandos = ["1", "2", "3"];
   String? entrada = "";
 
